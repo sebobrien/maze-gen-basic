@@ -19,8 +19,8 @@ public class BitSetMaze implements Maze {
 		this.bits.set(0,(height * width * 2));
 		this.height = height;
 		this.width = width;
-		this.startI = 0;
-		this.startJ = start;
+		this.startI = start;
+		this.startJ = 0;
 		this.endI = end;
 		this.endJ = --width;
 		setCellRightWall(endI, endJ, false);

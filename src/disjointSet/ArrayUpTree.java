@@ -19,4 +19,11 @@ public class ArrayUpTree implements DisjointSet {
 		
 	}
 
+
+	@Override
+	public int getRank(int id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

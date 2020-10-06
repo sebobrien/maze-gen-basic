@@ -14,9 +14,12 @@ import mazeGen.MazeGenerator;
 public class MazeApp {
 
 	public static void main(String[] args) {
-		 
-		Maze maze  = MazeGenFac.GetGenInstanceOf("BitSetMaze", "DisjointSetCompUT", 10, 10, 5, 6, 1).generateMaze();		
-		System.out.println(maze.toString());
+		
+		Long startNano = System.nanoTime();
+		Maze maze  = MazeGenFac.GetGenInstanceOf("BitSetMaze", "DisjointSetCompUT", 10000, 1000, 0, 29, 1).generateMaze();
+		Long endNano = System.nanoTime();
+		System.out.println(endNano - startNano);
+		System.out.println((endNano - startNano)/1000000000.0);
 	}
 
 }

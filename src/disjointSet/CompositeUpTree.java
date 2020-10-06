@@ -55,4 +55,9 @@ public class CompositeUpTree implements DisjointSet {
 		return result;
 	}
 
+	
+	public int getRank(int id) {
+		 return forest[find(id)].getRank();
+	}
+
 }

@@ -23,19 +23,20 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 			if ((wall % 2 == 0)) {
 				cell = wall / 2;
 				cellNext = cell + 1;
-				if (cellNext % maze.getWidth() != 0) {
+				if (cellNext % maze.getWidth() != 0 && disjointSet.find(cell) != disjointSet.find(cellNext)) {
 					maze.clearWall(wall);
 					disjointSet.union(cell, cellNext);
 				}
 			} else {
 				cell = (wall - 1) / 2;
 				cellNext = cell + maze.getWidth();
-				if (cellNext < maze.getSize()) {
+				if (cellNext < maze.getSize()&& disjointSet.find(cell) != disjointSet.find(cellNext)) {
 					maze.clearWall(wall);
 					disjointSet.union(cell, cellNext);
 				}
 			}
 		}
+		
 		return maze;
 		
 	}
