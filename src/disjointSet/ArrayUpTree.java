@@ -3,6 +3,11 @@ package disjointSet;
 public class ArrayUpTree implements DisjointSet {
 
 	
+	public ArrayUpTree(int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int find(int id) {
 		// TODO Auto-generated method stub
 		return 0;

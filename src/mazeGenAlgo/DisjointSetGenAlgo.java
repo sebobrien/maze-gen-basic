@@ -1,28 +1,25 @@
-package mazeGen;
+package mazeGenAlgo;
 
 import java.util.Random;
 
-import disjointSet.CompositeUpTree;
 import disjointSet.DisjointSet;
-import maze.BitSetMaze;
 import maze.Maze;
 
-public class DisjointSetMazeGen extends BitSetMazeGen {
+public class DisjointSetGenAlgo implements MazeGenAlgo {
 	
-	protected DisjointSet disjointSet;
+	protected DisjointSet disjointSet;	
 	
-	public DisjointSetMazeGen(int height, int width, int start, int end) {
-		super(height, width, start, end);
-		this.disjointSet = new CompositeUpTree(height * width);
+	public DisjointSetGenAlgo(DisjointSet disjointSet) {		
+		this.disjointSet = disjointSet;
 	}
 
-	public Maze generateMaze() {
+	public Maze Generate(Maze maze) {
 		int wall;
 		int cell;
 		int cellNext;
 		Random random = new Random();
 		while (disjointSet.find(maze.getStart()) != disjointSet.find(maze.getEnd())) {
-			wall = random.nextInt((size * 2) - 1);
+			wall = random.nextInt((maze.getSize() * 2) - 1);
 			if ((wall % 2 == 0)) {
 				cell = wall / 2;
 				cellNext = cell + 1;
@@ -33,13 +30,16 @@ public class DisjointSetMazeGen extends BitSetMazeGen {
 			} else {
 				cell = (wall - 1) / 2;
 				cellNext = cell + maze.getWidth();
-				if (cellNext < size) {
+				if (cellNext < maze.getSize()) {
 					maze.clearWall(wall);
 					disjointSet.union(cell, cellNext);
 				}
 			}
 		}
 		return maze;
+		
 	}
+	
+	
 
 }

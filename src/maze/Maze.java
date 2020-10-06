@@ -11,4 +11,5 @@ public interface Maze {
 	int getStart();
 	int getEnd();
 	int getWidth();
+	int getSize();
 }

@@ -7,19 +7,15 @@ import disjointSet.DisjointSet;
 import maze.BitSetMaze;
 import maze.Maze;
 
-import mazeGen.DisjointSetMazeGen;
+
+import mazeGen.MazeGenFac;
 import mazeGen.MazeGenerator;
 
 public class MazeApp {
 
 	public static void main(String[] args) {
-		//Maze maze = (new BitSetMaze(10, 50, 0, 9));
-		//System.out.println(maze.toString());
-
 		 
-	
-		MazeGenerator mazeGen = new DisjointSetMazeGen(40, 40, 0, 2); 
-		Maze maze = mazeGen.generateMaze();
+		Maze maze  = MazeGenFac.GetGenInstanceOf("BitSetMaze", "DisjointSetCompUT", 10, 10, 5, 6, 1).generateMaze();		
 		System.out.println(maze.toString());
 	}
 

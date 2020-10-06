@@ -86,5 +86,10 @@ public class BitSetMaze implements Maze {
 	}
 
 	
+	public int getSize() {		
+		return width * height;
+	}
+
+	
 
 }

@@ -1,8 +1,14 @@
 package maze;
 
+import mazeGenAlgo.MazeGenAlgo;
+
 public class CompositeMaze implements Maze {
 
 	
+	public CompositeMaze(int height, int width, int start, int end) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String toString() {
 		// TODO Auto-generated method stub
 		return null;
@@ -52,6 +58,12 @@ public class CompositeMaze implements Maze {
 
 	@Override
 	public int getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getSize() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

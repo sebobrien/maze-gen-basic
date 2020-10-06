@@ -3,17 +3,24 @@ package mazeGen;
 import disjointSet.DisjointSet;
 import maze.BitSetMaze;
 import maze.Maze;
+import mazeGenAlgo.MazeGenAlgo;
 
-public abstract class BitSetMazeGen implements MazeGenerator {
+public class BitSetMazeGen extends MazeGenAbstract {
 	
 	protected BitSetMaze maze;
 	
-	protected int size;
 	
-	public BitSetMazeGen(int height, int width, int start, int end) {
+	public BitSetMazeGen(int height, int width, int start, int end, MazeGenAlgo algo, int difficulty) {
 		this.maze = new BitSetMaze(height, width, start, end);
 		this.size = height * width;
+		this.genAlgo = algo;
+		this.difficulty = difficulty;
 		
+	}
+
+	
+	public Maze generateMaze() {		
+		return genAlgo.Generate(maze);
 	}
 	
 	
