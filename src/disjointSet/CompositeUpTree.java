@@ -1,5 +1,8 @@
 package disjointSet;
 
+
+import java.util.Arrays;
+
 public class CompositeUpTree implements DisjointSet {
 
 	private UpTreeNode[] forest;
@@ -7,9 +10,8 @@ public class CompositeUpTree implements DisjointSet {
 	public CompositeUpTree(int size) {
 
 		this.forest = new UpTreeNode[size];
-		for (int i = 0; i < size; i++) {
-			forest[i] = new UpTreeNode(i);
-		}
+		Arrays.setAll(forest, i -> new UpTreeNode(i) );
+		
 	}
 
 	public UpTreeNode findAndCompressRecursive(int id) {

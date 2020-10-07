@@ -91,5 +91,10 @@ public class BitSetMaze implements Maze {
 	}
 
 	
+	public int getFirstWall(int i) {
+		return bits.nextSetBit(i);
+	}
+
+	
 
 }

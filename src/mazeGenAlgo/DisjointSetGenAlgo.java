@@ -19,7 +19,7 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 		int cellNext;
 		Random random = new Random();
 		while (disjointSet.find(maze.getStart()) != disjointSet.find(maze.getEnd())) {
-			wall = random.nextInt((maze.getSize() * 2) - 1);
+			wall = maze.getFirstWall(random.nextInt((maze.getSize() * 2) - 1));
 			if ((wall % 2 == 0)) {
 				cell = wall / 2;
 				cellNext = cell + 1;

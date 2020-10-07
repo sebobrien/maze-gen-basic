@@ -68,6 +68,12 @@ public class CompositeMaze implements Maze {
 		return 0;
 	}
 
+	@Override
+	public int getFirstWall(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	
 	
 }

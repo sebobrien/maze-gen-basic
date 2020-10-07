@@ -8,6 +8,7 @@ public interface Maze {
 	boolean getCellLowerWall(int i, int j);
 	void setCellLowerWall(int i, int j, boolean value);
 	void clearWall(int idx);
+	int getFirstWall(int i);
 	int getStart();
 	int getEnd();
 	int getWidth();
