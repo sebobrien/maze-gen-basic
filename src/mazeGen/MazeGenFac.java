@@ -11,7 +11,7 @@ import mazeGenAlgo.MazeGenAlgo;
 public class MazeGenFac {
 
 	public static MazeGenerator GetGenInstanceOf(String mazeType, String algoType, int height, int width,
-			int start, int end,int difficulty) {
+			int start, int end) {
 
 		
 		MazeGenAlgo algo = null;
@@ -35,12 +35,12 @@ public class MazeGenFac {
 
 		case "BitSetMaze":
 
-			result = new BitSetMazeGen(height, width, start, end, algo, difficulty);
+			result = new BitSetMazeGen(height, width, start, end, algo);
 			break;
 
 		case "CompositeMaze":
 
-			result = new CompositeMazeGen(height, width, start, end, algo, difficulty);
+			result = new CompositeMazeGen(height, width, start, end, algo);
 			break;
 
 		}

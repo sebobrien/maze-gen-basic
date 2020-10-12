@@ -10,11 +10,11 @@ public class BitSetMazeGen extends MazeGenAbstract {
 	protected BitSetMaze maze;
 	
 	
-	public BitSetMazeGen(int height, int width, int start, int end, MazeGenAlgo algo, int difficulty) {
+	public BitSetMazeGen(int height, int width, int start, int end, MazeGenAlgo algo) {
 		this.maze = new BitSetMaze(height, width, start, end);
 		this.size = height * width;
 		this.genAlgo = algo;
-		this.difficulty = difficulty;
+		
 		
 	}
 

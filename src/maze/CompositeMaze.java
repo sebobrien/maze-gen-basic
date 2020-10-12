@@ -3,10 +3,16 @@ package maze;
 import mazeGenAlgo.MazeGenAlgo;
 
 public class CompositeMaze implements Maze {
-
+	
+	boolean[][] booleans;
+	int start;
+	int end;
 	
 	public CompositeMaze(int height, int width, int start, int end) {
-		// TODO Auto-generated constructor stub
+		this.booleans = new boolean[2*width][height];
+		this.start = start;
+		this.end = end;
+		
 	}
 
 	public String toString() {

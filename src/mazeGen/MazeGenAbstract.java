@@ -5,7 +5,7 @@ import mazeGenAlgo.MazeGenAlgo;
 
 public class MazeGenAbstract implements MazeGenerator {
 	
-	protected int difficulty;
+	
 	protected MazeGenAlgo genAlgo;	
 	protected int size;
 

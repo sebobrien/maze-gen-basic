@@ -5,7 +5,7 @@ import mazeGenAlgo.MazeGenAlgo;
 
 public class CompositeMazeGen extends MazeGenAbstract {
 
-	public CompositeMazeGen(int height, int width, int start, int end, MazeGenAlgo algo, int difficulty) {
+	public CompositeMazeGen(int height, int width, int start, int end, MazeGenAlgo algo) {
 		// TODO Auto-generated constructor stub
 	}
 
