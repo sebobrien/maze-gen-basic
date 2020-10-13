@@ -22,7 +22,7 @@ public class BitSetMaze implements Maze {
 		this.startI = start;
 		this.startJ = 0;
 		this.endI = end;
-		this.endJ = --width;
+		this.endJ = width-1;
 		setCellRightWall(endI, endJ, false);
 		
 	}

@@ -26,6 +26,7 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 		
 		
 		while (disjointSet.find(maze.getStart()) != disjointSet.find(maze.getEnd())) {
+			
 			wall = maze.getFirstWall(random.nextInt((maze.getSize() * 2) - 1));
 			//wall = unvisited.Deque();		
 			
