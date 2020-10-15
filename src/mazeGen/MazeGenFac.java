@@ -7,6 +7,7 @@ import maze.CompositeMaze;
 import maze.Maze;
 import mazeGenAlgo.DisjointSetGenAlgo;
 import mazeGenAlgo.MazeGenAlgo;
+import mazeGenAlgo.RecursiveDivAlgo;
 
 public class MazeGenFac {
 
@@ -28,7 +29,10 @@ public class MazeGenFac {
 
 			algo = new DisjointSetGenAlgo(new ArrayUpTree(height * width));
 			break;
-
+			
+		case "RecursiveDivAlgo":
+			
+			algo = new RecursiveDivAlgo();
 		}
 
 		switch (mazeType) {

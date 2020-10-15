@@ -18,12 +18,13 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 	}
 
 	public Maze Generate(Maze maze) {
+		
 		int wall;
 		int cell;
 		int cellNext;
 		//this.unvisited = new RandomIntegerQueue(maze.getSize()*2);
 		Random random = new Random();
-		
+		maze.allWallsUp();
 		
 		while (disjointSet.find(maze.getStart()) != disjointSet.find(maze.getEnd())) {
 			
