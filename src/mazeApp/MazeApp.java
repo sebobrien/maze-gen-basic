@@ -21,7 +21,7 @@ public class MazeApp {
 		//"DisjointSetArrayUT", "DisjointSetCompUT"
 		java.util.List<String> mazeTypes = Arrays.asList("BitSetMaze", "CompositeMaze");
 		java.util.List<String> algoTypes = Arrays.asList("DisjointSetArrayUT", "DisjointSetCompUT","RecursiveDivAlgo");
-		Benchmark.printAverageOf(30, 1000, 1000, mazeTypes, algoTypes);
+		Benchmark.printAverageOf(5, 1000, 1000, mazeTypes, algoTypes);
 //		Maze maze = MazeGenFac.GetGenInstanceOf(mazeTypes.get(0), algoTypes.get(2), 15,60, 0, 4).generateMaze();
 //		Maze maze = new CompositeMaze(10, 10, 0, 9);
 //		maze.wallsUpWithGap(0, 0, 1, 2, 9, false);

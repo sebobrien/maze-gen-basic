@@ -39,12 +39,12 @@ public class MazeGenFac {
 
 		case "BitSetMaze":
 
-			result = new BitSetMazeGen(height, width, start, end, algo);
+			result = new MazeGen(height, width, start, end, new BitSetMaze(height, width,start, end), algo);
 			break;
 
 		case "CompositeMaze":
 
-			result = new CompositeMazeGen(height, width, start, end, algo);
+			result = new MazeGen(height, width, start, end,new CompositeMaze(height, width,start, end), algo);
 			break;
 
 		}

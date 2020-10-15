@@ -5,13 +5,14 @@ import maze.BitSetMaze;
 import maze.Maze;
 import mazeGenAlgo.MazeGenAlgo;
 
-public class BitSetMazeGen extends MazeGenAbstract {
+public class MazeGen implements MazeGenerator {
 	
-	protected BitSetMaze maze;
+	protected Maze maze;
+	protected MazeGenAlgo genAlgo;
+	protected int size;
 	
-	
-	public BitSetMazeGen(int height, int width, int start, int end, MazeGenAlgo algo) {
-		this.maze = new BitSetMaze(height, width, start, end);
+	public MazeGen(int height, int width, int start, int end,Maze maze, MazeGenAlgo algo) {
+		this.maze = maze;
 		this.size = height * width;
 		this.genAlgo = algo;
 		
