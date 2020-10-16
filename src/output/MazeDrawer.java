@@ -17,6 +17,9 @@ public class MazeDrawer {
 	static Graphics graphics;
 	static Color mazeCol;
 	static Color backCol;
+	
+	
+	
 
 	public static void drawMaze(Maze maze, String format, String path, String fileName, int cellSizeFactor,
 			int bufferSize, Color mazeColour, Color BackGroundColour) {
@@ -32,7 +35,7 @@ public class MazeDrawer {
 		graphics.fillRect(0, 0, imageW, imageH);
 		drawBorder(maze, cellSizeFactor, bX, bY);
 		drawAllCells(maze, cellSizeFactor, bX, bY);
-		File outputfile = new File("mazes//"+fileName);
+		File outputfile = new File(path+fileName);
 		try {
 			ImageIO.write(image, "png", outputfile);
 		} catch (IOException e) {

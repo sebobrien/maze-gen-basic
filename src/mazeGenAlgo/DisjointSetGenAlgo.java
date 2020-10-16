@@ -51,6 +51,18 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 		return maze;
 		
 	}
+
+	@Override
+	public Byte[] GenerateFrames(Maze maze) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void GenerateAndDraw(Maze maze) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 

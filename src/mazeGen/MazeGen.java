@@ -23,6 +23,22 @@ public class MazeGen implements MazeGenerator {
 	public Maze generateMaze() {		
 		return genAlgo.Generate(maze);
 	}
+
+
+
+
+	@Override
+	public Byte[] GenerateFrames() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void GenerateAndDraw() {
+		genAlgo.GenerateAndDraw(maze);
+		
+	}
 	
 	
 	
