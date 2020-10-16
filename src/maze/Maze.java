@@ -4,9 +4,11 @@ public interface Maze {
 	
 	String toString();
 	boolean getCellRightWall(int i, int j);
+	boolean getCellRightWall(int idx);
 	void setCellRightWall(int i, int j, boolean value);
 	void setCellRightWall(int idx, boolean value);
 	boolean getCellLowerWall(int i, int j);
+	boolean getCellLowerWall(int idx);
 	void setCellLowerWall(int i, int j, boolean value);
 	void setCellLowerWall(int idx, boolean value);
 	void clearWall(int idx);

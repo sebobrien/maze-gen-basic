@@ -197,4 +197,18 @@ public class CompositeMaze implements Maze {
 		return height;
 	}
 
+	@Override
+	public boolean getCellRightWall(int idx) {
+		int i =  Math.floorDiv(idx, width );
+		int j = ((idx % width) * 2);
+		return booleans[i][j];
+	}
+
+	@Override
+	public boolean getCellLowerWall(int idx) {
+		int i =  Math.floorDiv(idx, width );
+		int j = ((idx % width) * 2) + 1;
+		return booleans[i][j];
+	}
+
 }

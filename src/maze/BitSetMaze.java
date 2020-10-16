@@ -171,4 +171,18 @@ public class BitSetMaze implements Maze {
 		return height;
 	}
 
+
+
+	@Override
+	public boolean getCellRightWall(int idx) {
+		return bits.get(idx * 2);
+	}
+
+
+
+	@Override
+	public boolean getCellLowerWall(int idx) {
+		return bits.get(idx * 2 + 1);
+	}
+
 }
