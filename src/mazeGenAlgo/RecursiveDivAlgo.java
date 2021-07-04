@@ -3,6 +3,7 @@ package mazeGenAlgo;
 import java.awt.Color;
 import java.util.Random;
 
+import gifWriter.Frame;
 import maze.Maze;
 import output.MazeDrawer;
 
@@ -72,7 +73,7 @@ public class RecursiveDivAlgo implements MazeGenAlgo {
 	}
 
 	@Override
-	public Byte[] GenerateFrames(Maze maze) {
+	public Frame[] GenerateFrames(Maze maze) {
 		// TODO Auto-generated method stub
 		return null;
 	}

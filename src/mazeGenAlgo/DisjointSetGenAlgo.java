@@ -1,18 +1,23 @@
 package mazeGenAlgo;
 
+import java.awt.Color;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeSet;
 
 import disjointSet.DisjointSet;
+import gifWriter.Frame;
 import maze.Maze;
+import output.MazeDrawer;
 
-public class DisjointSetGenAlgo implements MazeGenAlgo {
+public class DisjointSetGenAlgo extends FrameableAlgo implements MazeGenAlgo {
 	
 	private DisjointSet disjointSet;
-	private RandomIntegerQueue unvisited; 
+	//private RandomIntegerQueue unvisited; 
 	
-	public DisjointSetGenAlgo(DisjointSet disjointSet) {		
+	
+	public DisjointSetGenAlgo(DisjointSet disjointSet) {	
+		super();
 		this.disjointSet = disjointSet;
 		
 	}
@@ -24,6 +29,8 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 		int cellNext;
 		//this.unvisited = new RandomIntegerQueue(maze.getSize()*2);
 		Random random = new Random();
+		drawStep(maze);
+		frameStep(maze);
 		maze.allWallsUp();
 		
 		while (disjointSet.find(maze.getStart()) != disjointSet.find(maze.getEnd())) {
@@ -46,6 +53,8 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 					disjointSet.union(cell, cellNext);
 				}
 			}
+			drawStep(maze);
+			frameStep(maze);
 		}
 		
 		return maze;
@@ -53,17 +62,15 @@ public class DisjointSetGenAlgo implements MazeGenAlgo {
 	}
 
 	@Override
-	public Byte[] GenerateFrames(Maze maze) {
+	public Frame[] GenerateFrames(Maze maze) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void GenerateAndDraw(Maze maze) {
-		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
+
 
 }

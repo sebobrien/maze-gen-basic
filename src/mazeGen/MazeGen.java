@@ -27,14 +27,14 @@ public class MazeGen implements MazeGenerator {
 
 
 
-	@Override
+	
 	public Byte[] GenerateFrames() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 
-	@Override
+	
 	public void GenerateAndDraw() {
 		genAlgo.GenerateAndDraw(maze);
 		
